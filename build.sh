@@ -1,0 +1,1 @@
+cd /Users/louistsang/code/source/ImageNarrator/src/cpp/build && cmake .. && make && cd ../../.. && src/cpp/build/image_narrator
