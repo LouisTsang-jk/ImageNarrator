@@ -45,7 +45,7 @@ int processFile(const fs::path &input_path, const fs::path &output_dir)
     // 将图像保存为JPG格式
     std::vector<int> params;
     params.push_back(cv::IMWRITE_JPEG_QUALITY);
-    params.push_back(95); // you may need to adjust this value to achieve your size limit
+    params.push_back(20); // you may need to adjust this value to achieve your size limit
     if (cv::imwrite(output_path.string(), image, params))
     {
       std::cout << "Successfully saved image: " << output_path << std::endl;
