@@ -3,5 +3,11 @@
     "*.wasm": "wat",
     "iostream": "cpp",
     "ostream": "cpp"
-  }
+  },
+  "cSpell.words": [
+    "keepdim",
+    "softmax",
+    "topk",
+    "unsqueeze"
+  ]
 }

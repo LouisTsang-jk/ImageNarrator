@@ -2,6 +2,7 @@
 build
 output
 images
+imageNarrator
 # Prerequisites
 *.d
 
