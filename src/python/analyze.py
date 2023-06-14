@@ -1,15 +1,14 @@
 import os
-import clip
 import torch
 from PIL import Image
 import time
+import open_clip
 import json
 
 start_time = time.time()
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
-model, preprocess = clip.load("ViT-B/32", device=device)
-
+model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
+tokenizer = open_clip.get_tokenizer('ViT-B-32')
 
 folder_path = "output"
 
@@ -18,12 +17,12 @@ folder_path = "output"
 descriptions = ["churches", "cat", "dog", "apple", "orange", "goddess", "glass", "fruit"
                 "deer", "car", "unknown"]
 
-text_inputs = clip.tokenize(descriptions).to(device)
+text_inputs = open_clip.tokenize(descriptions)
 
 for filename in os.listdir(folder_path):
     if filename.endswith(".jpg") or filename.endswith(".png"):
         image_path = os.path.join(folder_path, filename)
-        image = preprocess(Image.open(image_path)).unsqueeze(0).to(device)
+        image = preprocess(Image.open(image_path)).unsqueeze(0)
         with torch.no_grad():
             image_features = model.encode_image(image)
             text_features = model.encode_text(text_inputs)
