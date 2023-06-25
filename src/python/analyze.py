@@ -12,10 +12,8 @@ tokenizer = open_clip.get_tokenizer('ViT-B-32')
 
 folder_path = "output"
 
-# with open('datasets/data.json') as file:
-#     descriptions = json.load(file)
-descriptions = ["churches", "cat", "dog", "apple", "orange", "goddess", "glass", "fruit"
-                "deer", "car", "unknown"]
+with open('datasets/custom.json') as file:
+    descriptions = json.load(file)
 
 text_inputs = open_clip.tokenize(descriptions)
 

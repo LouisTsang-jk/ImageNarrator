@@ -3,6 +3,8 @@ build
 output
 images
 imageNarrator
+image_narrator
+.TODO
 # Prerequisites
 *.d
 

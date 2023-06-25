@@ -5,9 +5,11 @@
     "ostream": "cpp"
   },
   "cSpell.words": [
+    "EXIF",
     "keepdim",
     "softmax",
     "topk",
     "unsqueeze"
-  ]
+  ],
+  "cmake.sourceDirectory": "/Users/louistsang/code/source/ImageNarrator/src/cpp"
 }
