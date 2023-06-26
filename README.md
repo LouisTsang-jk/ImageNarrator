@@ -1,5 +1,6 @@
 # ImageNarrator
 
+![screen-recording](./assets/screen-recording.gif)
 ## Description
 
 ImageNarrator is a versatile tool for image processing and descriptive analysis. This application leverages OpenCV and LibRaw for efficient conversion of raw images to JPEG format, and utilizes CLIP for generating meaningful textual descriptions of images. It is ideal for rapid and high-quality image interpretation.
